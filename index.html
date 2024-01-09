@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="task-tracker-app.css">
+    <script defer src="task-tracker-app.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Task Tracker</h1>
+        <label for="darkModeToggle">Dark Mode</label>
+        <input type="checkbox" id="darkModeToggle">
+    </header>
+
+    <div id="taskFormContainer">
+        <form id="taskForm">
+            <label for="taskTitle">Title:</label>
+            <input type="text" id="taskTitle" placeholder="Enter title" required>
+            <label for="taskDescription">Description:</label>
+            <textarea id="taskDescription" placeholder="Enter description" required></textarea>
+            <label for="priority">Priority:</label>
+            <select id="priority" required>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="filterButtons">
+            <button id="allTasks">All Tasks</button>
+            <button id="completedTasks">Completed Tasks</button>
+            <button id="pendingTasks">Pending Tasks</button>
+            <button id="clearAllTasks">Clear All Tasks</button>
+        </div>
+        <div id="searchContainer">
+            <label for="searchInput">Search:</label>
+            <input type="text" id="searchInput" placeholder="Enter Keyword">
+            <button id="searchButton">Search</button>
+        </div>
+    </div>
+
+    <ul id="taskList" class="task-list">
+    </ul>
+
+    
+</body>
+</html>
